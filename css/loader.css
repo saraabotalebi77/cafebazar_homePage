@@ -1,0 +1,60 @@
+.loader-wrapper {
+  width: 100vw;
+  height: 100vh;
+  direction: ltr;
+  --color-loader: var(--secondary-color);
+  --loader-size: 100px;
+  --loader-speed: 0.5s;
+  --hidden-loader-circle-size: 10px;
+}
+.loader {
+  --loader-circle-size: calc(var(--loader-size) / 4);
+}
+.loader::before,
+.loader::after {
+  content: "";
+  position: absolute;
+}
+.loader::before,
+.loader::after,
+.loader > span {
+  width: var(--loader-circle-size);
+  height: var(--loader-circle-size);
+  border-radius: 50%;
+  background: var(--color-loader);
+  animation-name: to-right;
+  animation-duration: var(--loader-speed);
+  animation-iteration-count: infinite;
+}
+.loader::after {
+  left: calc(
+    calc(var(--loader-size) / 4 * 2) +
+      calc(2 * var(--hidden-loader-circle-size))
+  );
+}
+.loader > span:nth-child(even) {
+  visibility: hidden;
+  width: var(--hidden-loader-circle-size);
+  height: var(--hidden-loader-circle-size);
+}
+.loader::before {
+  animation-name: scale-up;
+}
+.loader::after {
+  animation-name: scale-up;
+  animation-direction: reverse;
+}
+
+@keyframes to-right {
+  to {
+    transform: translateX(calc(100% + var(--hidden-loader-circle-size)));
+  }
+}
+@keyframes scale-up {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}

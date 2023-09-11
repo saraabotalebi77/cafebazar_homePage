@@ -1,0 +1,12 @@
+:root{
+    --primary-color : #f9fafd; 
+    --secondary-color : #0ea960;
+    --white-color : #fff;
+    --light-black : rgb(0,0,0,0.1);
+    --gray-06-color : rgb(241, 242, 249);
+    --gray-05-color : rgb(240, 240, 240);
+    --gray-04-color : rgb(202, 202, 202);
+    --gray-03-color : rgb(78, 78, 78);
+    --gray-02-color : rgb(70, 70, 70);
+    --gray-01-color : rgb(42, 42, 42);
+}

@@ -1,0 +1,192 @@
+.header{
+    position : sticky;
+    position: -webkit-sticky;
+    top : 0;
+    z-index : 100;
+}
+.header--main-menu--item.active,
+.top-page-responsive-menu--item.active{
+    position : relative;
+}
+.top-page-responsive-menu--item.active>.top-page-responsive-menu--link{
+    color : var(--secondary-color);
+}
+.header--main-menu--item.active::after,
+.top-page-responsive-menu--item.active::after{
+    content :"";
+    position : absolute;
+    bottom : 0;
+    width : 100%;
+    height : 3px;
+    background-color : var(--secondary-color);
+    border-top-left-radius : 0.5rem;
+    border-top-right-radius: 0.5rem;
+    z-index : -1;
+}
+.download-app-btn{
+    padding : 0.6rem 1.6rem;
+    color: var(--white-color);
+    background-color: var(--secondary-color);
+}
+.vertical-menu-btn:hover,
+.signUP-logIn--link:hover{
+    background-color : rgba(0,0,0,.03);
+}
+.search-form--show-searched-results{
+    flex-basis: 23rem;
+}
+.search-form{
+    border: 1px solid var(--gray-06-color);
+    background-color: var(--primary-color);
+}
+.search-form:hover,
+.search-form:focus-within{
+    background-color: var(--white-color);
+    border-color : var(--gray-04-color);
+}
+.search-input::placeholder{
+    font-size : 1.2rem;
+    color : #000;
+}
+.website-language-changing-btn.active{
+    display: block;
+}
+.website-language-changing-btn{
+    width : 18rem;
+    height : 5.5rem;
+    left : 0;
+    bottom : -5rem;
+    white-space: nowrap;
+    text-align: left;
+}
+.website-language-changing-btn::before{
+    content :"English version";
+    position : absolute;
+    top : 1rem;
+    left : 1rem;
+    width : calc(100% - 20px);
+    height : calc(100% - 20px);
+    border-radius : 0.5rem;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding-left : 1rem;
+    color : var(--gray-01-color);
+}
+.website-language-changing-btn:hover::before{
+    background-color: var(--gray-06-color)
+}
+.menu-icon-btn.active > .menu-icon{
+    display: none;
+}
+.menu-icon-btn.active > .close-icon{
+    display: block;
+}
+.responsive-menu--content{
+    position : fixed;
+    right : 0;
+    top : 5rem;
+    height : calc(100vh - 50px);
+    overflow : auto;
+}
+.responsive-menu--content.active{
+    display: flex;
+}
+.responsive-menu--item{
+    padding-right : 1rem;
+    padding-left : 2rem;
+}
+.responsive-menu--item::after{
+    content :"";
+    width : 0.7rem;
+    height : 0.7rem;
+    border-top : 1.8px solid #000;
+    border-left : 1.8px solid #000;
+    transform: rotate(-45deg);
+}
+.responsive-menu--item:hover{
+    background-color: var(--gray-06-color);
+}
+.show-searched-results{
+    background-color : var(--white-color);
+    top : 100%;
+    right : 50%;
+    transform: translateX(50%);
+    min-width : 100%;
+    max-width : 120%;
+    padding : 0.8rem;
+}
+.show-searched-results--searched-value-wrapper{
+    height : 4rem;
+    white-space: nowrap;
+    background-color: var(--gray-06-color);
+}
+.show-searched-results--separated-line{
+    width : 90%;
+}
+.show-searched-results--all-results-view-btn{
+    color : var(--secondary-color);
+}
+.show-searched-results--all-results-view-btn:hover{
+    background-color: var(--gray-06-color);
+}
+.show-searched-results>.loader-wrapper{
+    width : 100%;
+    height : 5rem;
+    --color-loader: var(--gray-01-color);
+  --loader-size: 30px;
+  --hidden-loader-circle-size: 4px;
+}
+@media only screen and (max-width:992px){
+    .header{
+        box-shadow: none;
+        border-bottom: 1px solid var(--gray-05-color);
+    }
+    .menu-icon-btn{
+        background-color: var(--primary-color);
+    }
+    .menu-icon-btn:hover{
+        box-shadow: 0 0 0 2px inset var(--gray-05-color);
+    }
+    .header--main-menu{
+        width : 100%;
+        position: fixed;
+        bottom : 0;
+        right : 0;
+        border-top: 1px solid var(--gray-05-color);
+        background-color: var(--white-color);
+        box-shadow: 0 2px 12px var(--light-black);
+        gap : 0;
+    }
+    .header--main-menu--item:nth-child(2){
+        order : -1;
+    }
+    .header--main-menu--item{
+        flex-grow: 1;
+        justify-content: center;
+    }
+    .header--main-menu--link{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .header--main-menu--item-text{
+        font-size : 1.4rem;
+    }
+    .header--content{
+        gap : 0.5rem;
+    }
+    .search-form--show-searched-results{
+        flex-grow: 1;
+        min-width : 80px;
+    }
+    .header--main-menu--item.active::after,
+    .top-page-responsive-menu--item.active::after{
+        width : 3.5rem;
+        right : 50%;
+        transform: translateX(50%);
+    }
+
+}
+    

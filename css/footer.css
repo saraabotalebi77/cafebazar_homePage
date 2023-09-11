@@ -1,0 +1,26 @@
+.footer--app-description{
+    min-width : 50%;
+    max-width : 50%;
+}
+.footer--app-download-container{
+    min-width : 45%;
+    max-width : 45%;
+}
+.footer--app-download-btns-wrapper{
+    margin-top : 1rem;
+}
+.footer--app-download-btn{
+    color : var(--secondary-color)
+}
+.footer--app-download-btn:hover{
+    background-color: #fafafa8e;
+}
+.footer--menu{
+    height : 10rem;
+}
+.footer--menu--link:hover{
+    color : var(--secondary-color);
+}
+.footer--footNote{
+    border-top : 1px solid var(--light-black);
+}
